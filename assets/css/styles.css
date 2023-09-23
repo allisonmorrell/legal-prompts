@@ -1,0 +1,26 @@
+
+
+/* Make text boxes resizable and full-width */
+textarea {
+    resize: both;
+}
+
+label[title] {
+    text-decoration: underline dotted;
+    cursor: help;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;  /* Adjust this value to add more or less space */
+}
+
+.input-container {
+    margin-bottom: 1em;  /* Adjust as needed */
+}
+
+/* Smaller text and display line breaks in the live preview */
+#livePreview {
+    font-size: 14px;
+}
