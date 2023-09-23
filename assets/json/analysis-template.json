@@ -29,5 +29,5 @@
             "instructions": "1) following the format below, create a logical plan to complete this task and then do each step in order\n2) explicitly note any limitations to your analysis\n3) rely only on the provided source text",
             "format": "# Overall impressions\n[your brief outline of the task to be completed and the most important factors to success]\n\n# Detailed plan\n[your outline of numbered steps of how you will complete the task, using extremely concise language]\n\n# Scratch notes\n[per the plan, carry out any intermediate analysis]\n\n# Memo\n\n## Overview\n[etc]"
         }
-    },
+    }
 ]
