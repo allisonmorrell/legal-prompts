@@ -21,8 +21,8 @@
         }
     },
     {
-        "name": "entities_and_chrono",
-        "label": "Entities and Chronology",
+        "name": "make_a_plan",
+        "label": "Plan to write memo - Entities and Chronology",
         "fields": {
             "role": "an expert legal researcher",
             "task": "analyze the individuals, legal entities, contracts, property and chronology of events in this case excerpt and create a memorandum",
