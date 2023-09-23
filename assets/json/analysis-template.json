@@ -9,5 +9,16 @@
             "instructions": "1) set out each step logically and thoroughly\n2) cite your sources using the above text",
             "format": "# Overview\n\n# Issues\n\n# Analysis"
         }
+    },
+
+    {
+        "name": "chronology",
+        "label": "Chronology",
+        "fields": {
+            "role": "an expert researcher",
+            "task": "create a chronology of the events described in the text below",
+            "instructions": "1) Ensure to include every event described, whether explicitly or implicitly/n2) Include exact or approximate dates as applicable\n3) Before beginning the chronology, discuss the text in preparation\n4) Use the Markdown table format below",
+            "format": "# Discussion of text\n\n# Chronology\n|Date|Event|Description|"
+        }
     }
 ]
