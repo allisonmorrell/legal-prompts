@@ -1,0 +1,13 @@
+
+[
+    {
+        "name": "analysis_memo",
+        "label": "JSON Analysis memorandum",
+        "fields": {
+            "role": "an expert researcher",
+            "task": "analyze this text",
+            "instructions": "1) set out each step logically and thoroughly\n2) cite your sources using the above text",
+            "format": "# Overview\n\n# Issues\n\n# Analysis"
+        }
+    }
+]
