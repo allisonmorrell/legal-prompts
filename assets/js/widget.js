@@ -31,8 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			<div class="card">
 				<div class="card-body">
 					<h5 class="card-title">Token Estimate</h5>
-					<p>Rough estimate of tokens at 4 characters/token. See <a href="https://platform.openai.com/tokenizer">OpenAI tokenizer</a> for a closer estimate.</p>
-					<p>On the ChatGPT app, GPT 3-5 will accept about 10,500 tokens, and GPT-4 about 5,000.<p>
+					<p>Rough estimate of tokens at 4 characters/token. See <a href="https://platform.openai.com/tokenizer">OpenAI tokenizer</a> for a closer estimate. On the ChatGPT app, GPT 3-5 will accept about 10,500 tokens, and GPT-4 about 5,000.</p>
 					<div class="row mb-3">
 						<div class="col-md-6">
 							<strong>Character Count:</strong> <span id="charCount">0</span>
