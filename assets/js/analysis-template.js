@@ -1,6 +1,5 @@
-
-// Define the data structure for presets
-const templates = [
+// Placeholder for templates in case the fetch fails
+const fallbackTemplates = [
     {
         "name": "analysis_memo",
         "label": "Analysis memorandum",
@@ -14,7 +13,7 @@ const templates = [
 ];
 
 // Function to populate the individual input fields based on the selected template
-function populateInputFields(templateName) {
+function populateInputFields(templateName, templates) {
     const selectedTemplate = templates.find(template => template.name === templateName);
     if (selectedTemplate) {
         document.getElementById('roleInput').value = selectedTemplate.fields.role;
@@ -46,45 +45,8 @@ function updateLivePreview() {
     livePreview.textContent = promptText;
 }
 
-// Function to implement the copy to clipboard functionality
-function copyToClipboard() {
-    const livePreview = document.getElementById('livePreview');
-    const textArea = document.createElement('textarea');
-    textArea.value = livePreview.textContent;
-    document.body.appendChild(textArea);
-    textArea.select();
-    document.execCommand('copy');
-    document.body.removeChild(textArea);
-    alert('Content copied to clipboard!');
-}
-
-
-// Function to check the word count
-function checkWordCount() {
-    const maxWords = parseInt(document.getElementById('maxWordsInput').value);
-    const sourceText = document.getElementById('sourceTextInput').value;
-    const wordCount = sourceText.split(/\s+/).filter(Boolean).length; // Count non-empty words
-    
-    const wordCountWarning = document.getElementById('wordCountWarning');
-    if (wordCount > maxWords) {
-        wordCountWarning.textContent = `Warning: Word count exceeds maximum (${wordCount}/${maxWords})`;
-        wordCountWarning.style.color = 'red';
-    } else {
-        wordCountWarning.textContent = '';
-    }
-}
-
-// Attach event listeners
-document.getElementById('sourceTextInput').addEventListener('input', checkWordCount);
-document.getElementById('maxWordsInput').addEventListener('input', checkWordCount);
-
-// Call the function once to initialize
-checkWordCount();
-
-
-
-// Attach event listeners after the document is fully loaded
-document.addEventListener('DOMContentLoaded', function() {
+// Logic to handle templates, either from fetched JSON or fallback
+function handleTemplates(templates) {
     // Populate the template dropdown
     const templateDropdown = document.getElementById('templateDropdown');
     templates.forEach(template => {
@@ -95,20 +57,29 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Populate the individual input fields based on the selected template
-    populateInputFields(templateDropdown.value);
+    populateInputFields(templateDropdown.value, templates);
     
     // Update live preview when any dropdown or input changes
     document.getElementById('templateDropdown').addEventListener('change', function() {
-        populateInputFields(this.value);
+        populateInputFields(this.value, templates);
         updateLivePreview();
     });
     document.querySelectorAll('textarea').forEach(textarea => {
         textarea.addEventListener('input', updateLivePreview);
     });
     
-    // Copy content to clipboard when the button is clicked
-    document.getElementById('copyButton').addEventListener('click', copyToClipboard);
-    
     // Initialize the live preview
     updateLivePreview();
+}
+
+// Attach event listeners after the document is fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Fetch the templates from the JSON file
+    fetch('assets/json/analysis-template.json')
+        .then(response => response.json())
+        .then(handleTemplates)
+        .catch(error => {
+            console.warn('Error loading templates from JSON. Using fallback templates:', error);
+            handleTemplates(fallbackTemplates);
+        });
 });
