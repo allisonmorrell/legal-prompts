@@ -1,0 +1,16 @@
+# Node modules
+/node_modules/
+
+# Package files
+package-lock.json
+package.json
+
+# Repl files
+.replit
+replit.nix
+
+# Config directories
+/.config/
+
+# UPM directories
+/.upm/
