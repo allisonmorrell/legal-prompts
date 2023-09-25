@@ -21,6 +21,26 @@
         }
     },
     {
+        "name": "sources_and_treatment",
+        "label": "Sources and treatment",
+        "fields": {
+            "role": "an expert legal researcher",
+            "task": "create a table to analyze the legal sources discussed in this text",
+            "instructions": "Based on the above sources, complete the table below with information from the sources. First, discuss the contents of the excerpt generally. Second, fill in the table in the format described below. For Treatment, include what proposition of law the case is relied on for, and any positive or negative comments on the case",
+            "format": "# Discussion of text\n\n# Cases\n|Case name and citation|Treatment|"
+        }
+    },
+    {
+        "name": "chronology_implications",
+        "label": "Chronology with implications",
+        "fields": {
+            "role": "an expert legal researcher",
+            "task": "create a chronology of the events described in this case excerpt",
+            "instructions": "Discuss the excerpt in one paragraph first, then create the chronology. Use extremely concise language in the table, with no more than one sentence in each box.",
+            "format": "## Discussion of text\n\n## Chronology\n| Date (exact or approximate) | Event | Description | Implications (relevance of this event to the case) |"
+        }
+    },
+    {
         "name": "make_a_plan",
         "label": "Plan to write memo - Entities and Chronology",
         "fields": {
