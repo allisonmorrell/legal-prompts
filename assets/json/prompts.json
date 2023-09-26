@@ -1,0 +1,57 @@
+{
+  "categories": {
+    "simple": [
+      {
+        "name": "cited_documents",
+        "label": "Documents cited table",
+        "prompt": "From the above text, make me a table of the cited documents and the sections or paragraphs of each that are cited. First discuss them, then create the table.",
+        "note": "",
+        "transcript_url": "https://chat.openai.com/share/a8c79ed8-c7dd-4e29-9fa4-9fc3f8d153bd"
+      }
+    ],
+    "chain": [
+      {
+        "name": "issue_spotting",
+        "label": "Issue spotting",
+        "prompt": ["The above are some notes on a legal case. Please create a logical description of the legal issues that are potentially involved here in a hierarchical list. Include everything that could possibly be relevant no matter how small the chance is that that issue is raised. ", "Now, discuss the relative likelihood of each issue being raised, then reorder the issues from highest to lowest probability. "],
+        "note": "",
+        "transcript_url": ""
+      },
+  {
+    "name": "describe_document",
+    "label": "Describe document with respect to issue",
+    "prompt": ["Describe what the above document contains", "Give me a detailed list of what the document contains with respect to [TOPIC]"],
+    "note": "",
+    "transcript_url": ""
+  },
+  {
+    "name": "relevant_provisions",
+    "label": "Relevant provisions of statute to case",
+    "prompt": ["The above is an excerpt from [STATUTE]. Discuss which provisions of [STATUTE] might be invoked in determining the sanctions to be imposed. Create a one paragraph summary of the types of information that are included.", "The above is a case excerpt. Discuss which provisions of [STATUTE] might be invoked in relation to [ISSUE]"],
+    "note": "",
+    "transcript_url": "https://chat.openai.com/share/c0c89670-e995-4ac7-956f-099b8f0786d1"
+  },
+  {
+    "name": "extract_quantum_info",
+    "label": "Extract quantum info from discussion of other cases",
+    "prompt": ["The above is an excerpt from a legal case. I want to create a table which captures all of the information contained therein, including the names of cases, facts, paragraph references, amounts of damages. The table should split up information concerning 1) injuries 2) employment 3) impact on other life areas 4) other factors about the case mentioned", "Create a markdown table (not in a code block) with columns for citation, description, and amount of damages, combine information above together"],
+    "note": "This is not optimized.",
+    "transcript_url": "https://chat.openai.com/share/331f4469-602e-4698-a038-a8a5490ae896"
+  },    
+  {
+    "name": "clarify_and_plan",
+    "label": "Clarify facts and plan research",
+    "prompt": ["The above is a meeting transcript of a meeting between a lawyer and a legal researcher. Now, write a bullet point list of additional facts required to commence the research", "Make a list of documents the researcher will need to review concerning the facts of the case", "Assume I know absolutely nothing about this topic. Create a list of legal topics and subtopics I will need to understand"],
+    "note": "",
+    "transcript_url": "https://chat.openai.com/share/415d24a1-b38e-47b6-a7b5-bbeda8330ce6"
+  },
+  {
+    "name": "apply_law",
+    "label": "Analyze and apply the law",
+    "prompt": ["The above excerpt outlines the law concerning [ISSUE]. Please write a brief memo analyzing the legal takeaways from these paragraphs, with a view to creating a research strategy for a legal researcher who will be [DESCRIPTION OF RESEARCH]", "You're role-playing as a judge applying this law. The facts are [FACTS]. How would you apply the above law?"],
+    "note": "The example uses the description of the law concerning pleadings in Mercantile Office Systems Private Limited v. Worldwide Warranty Life Services Inc., 2021 BCCA 362.",
+    "transcript_url": "https://chat.openai.com/share/35f66348-8c2a-41b9-a1a5-4bf731cf9512"
+  }
+    ]
+  }
+}
