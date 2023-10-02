@@ -27,7 +27,7 @@
   {
     "name": "relevant_provisions",
     "label": "Relevant provisions of statute to case",
-    "prompt": ["The above is an excerpt from [STATUTE]. Discuss which provisions of [STATUTE] might be invoked in determining the sanctions to be imposed. Create a one paragraph summary of the types of information that are included.", "The above is a case excerpt. Discuss which provisions of [STATUTE] might be invoked in relation to [ISSUE]"],
+    "prompt": ["The above is an excerpt from [STATUTE]. Discuss which provisions of [STATUTE] might be invoked in determining [ISSUE]. Create a one paragraph summary of the types of information that are included.", "The above is a case excerpt. Discuss which provisions of [STATUTE] might be invoked in relation to [ISSUE]"],
     "note": "",
     "transcript_url": "https://chat.openai.com/share/c0c89670-e995-4ac7-956f-099b8f0786d1"
   },

@@ -42,11 +42,11 @@
     },
     {
         "name": "make_a_plan",
-        "label": "Plan to write memo - Entities and Chronology",
+        "label": "Plan to write quick reference guide",
         "fields": {
             "role": "an expert legal researcher",
-            "task": "analyze the individuals, legal entities, contracts, property and chronology of events in this case excerpt and create a memorandum",
-            "instructions": "1) following the format below, create a logical plan to complete this task and then do each step in order\n2) explicitly note any limitations to your analysis\n3) rely only on the provided source text",
+            "task": "analyze the information in the below case excerpt and provide a helpful quick reference guide for the facts mentioned",
+            "instructions": "1) following the format below, create a logical plan to complete this task and then do each step in order\n2) ensure that your analysis is highly precise and specific\n3) rely only on the provided source text",
             "format": "# Overall impressions\n[your brief outline of the task to be completed and the most important factors to success]\n\n# Detailed plan\n[your outline of numbered steps of how you will complete the task, using extremely concise language]\n\n# Scratch notes\n[per the plan, carry out any intermediate analysis]\n\n# Memo\n\n## Overview\n[etc]"
         }
     }
